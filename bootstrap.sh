@@ -35,11 +35,4 @@ then
 	rm -rf /var/www
 	ln -fs /vagrant /var/www
 
-	#Add new remote user on mysql
-	mysql -uroot -p$mysql_pwd 
-	use mysql
-	GRANT ALL ON *.* to root@'192.168.10.1' IDENTIFIED BY 'vagrant';
-	FLUSH PRIVILEGES;
-	exit
-
 fi
